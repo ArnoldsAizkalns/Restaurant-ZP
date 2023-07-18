@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8f1e7] text-[#1f2937] tracking-wide;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway];
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
+
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-lg border-2 text-black border-black uppercase hover:bg-zinc-200 hover:scale-105 duration-200;
+  }
+}
+
+.bg-main {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Прозрачный цвет фона с 50% прозрачностью */
+}
+
+.bg-main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/assets/Steiks\ Zelta\ Pakavs2.webp");
+  opacity: 0.7; /* Прозрачность фонового изображения (от 0 до 1) */
+  z-index: -1;
+}
